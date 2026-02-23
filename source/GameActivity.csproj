@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameActivity</RootNamespace>
     <AssemblyName>GameActivity</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -158,6 +158,7 @@
     <Compile Include="Models\ActivityBackup.cs" />
     <Compile Include="Models\ExportData\ExportData.cs" />
     <Compile Include="Models\ExportData\ExportDataAll.cs" />
+    <Compile Include="Models\ExternalSessionDto.cs" />
     <Compile Include="Models\GameActivities.cs" />
     <Compile Include="Models\GameActivitiesCollection.cs" />
     <Compile Include="Models\LibreHardwareData.cs" />
@@ -208,6 +209,7 @@
       <DependentUpon>TransfertData.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\ActivityDatabase.cs" />
+    <Compile Include="Services\ExternalSyncBridge.cs" />
     <Compile Include="Services\GameActivityStats.cs" />
     <Compile Include="Services\GameActivityTopPanelItem.cs" />
     <Compile Include="Services\GameActivityViewSidebar.cs" />
@@ -594,3 +596,4 @@
     <PostBuildEvent>powershell -ExecutionPolicy Unrestricted $(SolutionDir)..\build\build.ps1 -ConfigurationName $(ConfigurationName) -OutDir $(SolutionDir)$(OutDir) -SolutionDir $(SolutionDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>
+
